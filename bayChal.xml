@@ -127,6 +127,15 @@
                                     <statement name="ELSE">
                                       <block type="movement_reverse" id="1040"></block>
                                     </statement>
+                                    <next>
+                                      <block type="robot_delay" id="1157" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="1164">
+                                            <field name="NUM">200</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
@@ -141,6 +150,15 @@
             </next>
           </block>
         </statement>
+        <next>
+          <block type="robot_delay" id="1175" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="1182">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+          </block>
+        </next>
       </block>
     </statement>
     <next>

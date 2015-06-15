@@ -165,5 +165,4 @@
       <block type="movement_stop" id="88"></block>
     </next>
   </block>
-  <block type="controls_if" id="171" inline="false" x="501" y="180"></block>
 </xml>

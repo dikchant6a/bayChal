@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="31" inline="false" x="-177" y="82">
+  <block type="controls_whileUntil" id="31" inline="false" x="-130" y="69">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="38">
@@ -85,6 +85,50 @@
                                     <field name="NUM">100</field>
                                   </block>
                                 </value>
+                                <next>
+                                  <block type="controls_if" id="717" inline="false">
+                                    <mutation elseif="1" else="1"></mutation>
+                                    <value name="IF0">
+                                      <block type="logic_compare" id="773" inline="true">
+                                        <field name="OP">LT</field>
+                                        <value name="A">
+                                          <block type="sensor_object" id="957">
+                                            <field name="OBJECT">RIGHTSIDE</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number" id="964">
+                                            <field name="NUM">50</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="movement_left" id="758"></block>
+                                    </statement>
+                                    <value name="IF1">
+                                      <block type="logic_compare" id="1086" inline="true">
+                                        <field name="OP">GT</field>
+                                        <value name="A">
+                                          <block type="sensor_object" id="1093">
+                                            <field name="OBJECT">RIGHTSIDE</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number" id="1100">
+                                            <field name="NUM">90</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO1">
+                                      <block type="movement_right" id="1029"></block>
+                                    </statement>
+                                    <statement name="ELSE">
+                                      <block type="movement_reverse" id="1040"></block>
+                                    </statement>
+                                  </block>
+                                </next>
                               </block>
                             </next>
                           </block>
